@@ -1,41 +1,69 @@
-# Prerequisites
+# --- Prerequisites & Intermediates ---
 *.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
+*.dwo
 *.mod
 *.smod
 
-# Compiled Static libraries
-*.lai
+# --- Compiled Object Files ---
+*.o
+*.obj
+*.slo
+*.lo
+*.elf
+
+# --- Precompiled Headers ---
+*.gch
+*.pch
+
+# --- Linker & Debugger Files ---
+*.ilk
+*.pdb
+*.map
+*.exp
+*.dSYM/
+
+# --- Libraries (Static & Dynamic) ---
 *.la
+*.lai
+*.lo
 *.a
 *.lib
+*.so
+*.so.*
+*.dylib
+*.dll
 
-# Executables
+# --- Executables ---
 *.exe
 *.out
 *.app
+*.hex
 
-# debug information files
-*.dwo
+# --- Build Directories ---
+[Bb]uild/
+[Dd]ebug/
+[Rr]elease/
+bin/
+obj/
+out/
+
+# --- Build System Generated (CMake/Make) ---
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+Makefile
+
+# --- IDE-Specific Files ---
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.sln.doccache
+
+# --- OS-Specific Files ---
+.DS_Store
+Thumbs.db
