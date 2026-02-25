@@ -11,6 +11,21 @@
 #include <cctype> 
 #include <random>
 #include <ctime>
+#include <cstdlib> // Required for std::system
+
+void syncMemoryToGitHub() {
+    // 1. Stage the file
+    std::system("git add memory.txt");
+    
+    // 2. Commit the change with a message
+    std::system("git commit -m \"AI memory updated\"");
+    
+    // 3. Push to your GitHub repository
+    std::system("git push origin main");
+    
+    std::cout << "Memory synced to GitHub!" << std::endl;
+}
+
 
 typedef std::string string;
 
@@ -67,10 +82,10 @@ void respond(string input) {
         memory[input].push_back(tempstr);
         
         
-        
+        {
         std::ofstream sFile("memory.txt", std::ios::app);
         sFile << input << "|" << tempstr << "\n";
-        
+        }
         std::cout<<"\nSakura: Add another? (y/n) ";
         std::getline(std::cin, choice);
         
@@ -121,6 +136,7 @@ int main() {
             break;
         }
         respond(ask);
+        syncMemoryToGitHub();
     }
     return 0;
 }
