@@ -95,6 +95,7 @@ void respond(string input) {
         
         
         
+        
         std::cout<<std::endl;
         std::cout << "Sakura: " << memory[input].back() << "\n";
     }
@@ -134,9 +135,9 @@ int main() {
         
         if(ask == "06062014") {
             break;
+            syncMemoryToGitHub();
         }
         respond(ask);
-        syncMemoryToGitHub();
     }
     return 0;
 }
